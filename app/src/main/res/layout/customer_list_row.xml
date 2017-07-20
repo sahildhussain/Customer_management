@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="@dimen/row_name_size"
+            android:id="@+id/list_row_name"
+            android:textColor="@color/primary_dark_material_dark"
+            android:text="Sahil Hussain"/>
+
+        <TextView
+            android:id="@+id/list_row_sales"
+            android:text="Sales = 75%"
+            android:textSize="@dimen/row_sale_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:gravity="right"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/addsales"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right" />
+    </LinearLayout>
+
+
+</LinearLayout>

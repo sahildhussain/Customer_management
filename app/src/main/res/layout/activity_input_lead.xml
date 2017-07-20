@@ -4,7 +4,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.sahil.customer_management.lead_list">
+    tools:context="com.example.sahil.customer_management.ui.lead_list">
 
 
     <TextView
@@ -23,16 +23,15 @@
         android:id="@+id/progressBar"
         android:layout_below="@+id/textView5"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/editText"
+        android:layout_alignEnd="@+id/edit_name"
         android:indeterminate="false" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:text="Name"
+        android:id="@+id/edit_name"
+        android:hint="Name"
         android:layout_marginTop="100dp"
-        android:layout_below="@+id/textView5"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 
@@ -40,11 +39,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
-        android:text="email"
-        android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_below="@+id/editText"
-        android:layout_alignEnd="@+id/editText"
+        android:hint="Email"
+        android:id="@+id/edit_email"
+        android:layout_below="@+id/edit_company"
+        android:layout_alignEnd="@+id/spinner"
         android:layout_alignParentStart="true" />
 
     <EditText
@@ -52,10 +50,10 @@
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:ems="10"
-        android:text="phone no."
-        android:id="@+id/editText3"
-        android:layout_below="@+id/editText2"
-        android:layout_alignEnd="@+id/editText2"
+        android:hint="Phone no."
+        android:id="@+id/edit_phone"
+        android:layout_below="@+id/edit_email"
+        android:layout_alignEnd="@+id/spinner"
         android:layout_alignParentStart="true" />
 
     <EditText
@@ -63,53 +61,51 @@
         android:layout_height="wrap_content"
         android:inputType="textPostalAddress"
         android:ems="10"
-        android:text="D.O.B"
-        android:id="@+id/editText4"
-        android:layout_below="@+id/editText3"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/editText3" />
+        android:hint="D.O.B"
+        android:id="@+id/edit_dob"
+        android:layout_below="@+id/edit_phone" />
 
 
     <EditText
-        android:id="@+id/editText5"
-        android:text="Address"
+        android:id="@+id/edit_address"
+        android:hint="Address"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText4"/>
+        android:layout_below="@+id/edit_dob"
+        android:layout_alignEnd="@+id/spinner" />
 
 
-    <Button
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit"
-        android:textStyle="italic|bold"
-        android:background="#ff5e00ff"
-        android:id="@+id/button3"
-        android:layout_margin="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="#fffffed9" />
+        android:id="@+id/edit_company"
+        android:hint="Company"
+        android:layout_below="@+id/edit_name"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/edit_name" />
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/editText5"
-        android:layout_above="@+id/button3"
-        android:layout_marginTop="10dp"
-        android:layout_alignEnd="@+id/editText5">
-        <TextView
-            android:id="@+id/sucess"
-            android:text="Success: 12"
-            android:layout_weight="0.5"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
-        <TextView
-            android:id="@+id/hardluck"
-            android:text="HardLuck: 40"
-            android:layout_weight="0.5"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
-    </LinearLayout>
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_below="@+id/edit_phone"
+        android:layout_toEndOf="@+id/textView5"
+        android:layout_above="@+id/edit_address" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editdescription"
+        android:gravity="top"
+        android:inputType="textMultiLine|textAutoCorrect"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:layout_alignEnd="@+id/spinner"
+        android:hint="*Description*"
+        android:background="#fffff7b7"
+        android:layout_below="@+id/edit_address" />
+
+
 
 </RelativeLayout>

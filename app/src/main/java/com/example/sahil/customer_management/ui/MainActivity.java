@@ -1,23 +1,41 @@
-package com.example.sahil.customer_management;
+package com.example.sahil.customer_management.ui;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+
+import com.example.sahil.customer_management.R;
 
 
-public class lead_list extends Activity {
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lead_list);
+        setContentView(R.layout.activity_main);
+        Button show_lead = (Button) findViewById(R.id.show_lead);
+        show_lead.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                launch_show_lead();
+            }
+        });
+    }
+    private void launch_show_lead()
+    {
+        Intent intent=new Intent(this, lead_list.class);
+        startActivity(intent);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_lead_list, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 

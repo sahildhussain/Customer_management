@@ -47,11 +47,13 @@
         <ImageButton
             android:layout_width="177dp"
             android:layout_height="168dp"
+            android:src="@mipmap/ic_launcher"
             android:background="@mipmap/ic_launcher"
             android:layout_gravity="left|center_vertical" />
 
         <ImageButton
             android:layout_width="177dp"
+            android:src="@mipmap/ic_failure"
             android:layout_height="match_parent"
             android:background="@mipmap/ic_failure" />
 

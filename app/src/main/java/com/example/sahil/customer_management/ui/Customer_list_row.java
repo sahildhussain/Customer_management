@@ -1,38 +1,36 @@
-package com.example.sahil.customer_management;
+package com.example.sahil.customer_management.ui;
 
-import android.app.Activity;
-import android.content.Intent;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.view.LayoutInflater;
+
+import com.example.sahil.customer_management.R;
 
 
-public class MainActivity extends Activity {
+public class Customer_list_row extends ActionBarActivity {
 
+    final private Context context = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Button show_lead = (Button) findViewById(R.id.show_lead);
-        show_lead.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                launch_show_lead();
-            }
-        });
-    }
-    private void launch_show_lead()
-    {
-        Intent intent=new Intent(this, lead_list.class);
-        startActivity(intent);
+        setContentView(R.layout.customer_list_row);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_customer_list_row, menu);
         return true;
     }
 

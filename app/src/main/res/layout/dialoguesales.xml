@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:outlineProvider="paddedBounds"
+    android:layout_margin="20dp">
+
+
+
+    <AutoCompleteTextView
+        android:id="@+id/inputtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Amount= Sales-Invested"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal"
+        android:layout_gravity="center_horizontal|bottom" />
+
+</FrameLayout>

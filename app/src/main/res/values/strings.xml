@@ -6,4 +6,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_lead_list">lead_list</string>
     <string name="title_activity_input_lead">input_lead</string>
+    <string name="input_done">DONE</string>
+    <string name="title_activity_customer_list_row">Customer_list_row</string>
+    <string name="title_activity_lead_details">lead_details</string>
 </resources>
